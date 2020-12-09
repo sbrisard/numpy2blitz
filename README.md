@@ -56,7 +56,8 @@ I'm a numpy array again (and I've changed)
  [1. 1. 1.]]
 ```
 
-To do this, we use
+Note that all this happens without deep-copying the arrays, of course. To do
+this, we use
 
 - The [pybind11/numpy.h](https://pybind11.readthedocs.io/en/latest/advanced/pycpp/numpy.html#numpy) library. In particular, the method `mutable_data()` is useful.
 - The ability to create blitz++ arrays from existing data (see §2.3.7 of the
